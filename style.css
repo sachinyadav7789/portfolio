@@ -212,7 +212,7 @@ svg {
 
 .nav a:hover,
 .nav a.active {
-  color: #dec014;
+  color: #ddf503;
 }
 
 .nav a.active:after {
@@ -265,7 +265,7 @@ svg {
   height: 2px;
   margin: 4px 0;
   border-radius: 2px;
-  background: #ff0101;
+  background: #fff201;
   transition: 0.2s;
 }
 
@@ -465,7 +465,7 @@ h1 span {
 .hero-meta strong {
   font-family: "Space Grotesk";
   font-size: 27px;
-  background: linear-gradient(100deg, #fff, var(--blue));
+  background: linear-gradient(100deg, #edf50c, var(--blue));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -813,7 +813,7 @@ h1 span {
 
 .skill-card {
   border: 1px solid var(--line);
-  background: rgba(55, 169, 165, 0.204);
+  background: rgba(126, 112, 68, 0.793);
   border-radius: 18px;
   padding: 24px;
   min-height: 205px;
@@ -858,7 +858,7 @@ h1 span {
 
 .skill-num {
   font: 700 11px "Space Grotesk";
-  color: #feffff;
+  color: #ffffff;
 }
 
 .skill-card h3 {
@@ -883,7 +883,7 @@ h1 span {
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   border: 1px solid var(--line);
   border-radius: 24px;
-  background: rgba(38, 6, 6, 0.701);
+  background: rgb(0, 0, 0);
   overflow: hidden;
 }
 
@@ -1071,7 +1071,7 @@ h1 span {
 }
 
 .footer span {
-  color: #727d8e;
+  color: #c7d3e6;
   font-size: 12px;
 }
 
@@ -1083,7 +1083,7 @@ h1 span {
 }
 
 .footer-links a {
-  color: #8b96a7;
+  color: #feffff;
   font-size: 12px;
 }
 
@@ -1093,7 +1093,7 @@ h1 span {
 
 .footer p {
   grid-column: 1/-1;
-  color: #505b6c;
+  color: #fffefe;
   font-size: 11px;
   margin: 5px 0 0;
 }
