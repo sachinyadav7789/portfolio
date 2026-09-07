@@ -1,1 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sachin Yadav | Web Architect & Co-Founder - CityByteHub</title>
+    <meta name="description" content="Sachin Yadav - Web Architect, Co-Founder at CityByteHub. Specializing in SaaS platforms, web development, and scalable business solutions.">
+    <meta name="keywords" content="Sachin Yadav, Web Developer, CityByteHub, SaaS, Freelancer, BCA, MDU Rohtak">
+    <meta name="author" content="Sachin Yadav">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
+    <!-- LOADING SCREEN -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">
+                <span class="loader-dot">•</span>
+                <span class="loader-dot">•</span>
+                <span class="loader-dot">•</span>
+            </div>
+            <p>Loading Portfolio</p>
+        </div>
+    </div>
+
+    <!-- BACKGROUND -->
+    <div class="bg-wrapper">
+        <div class="bg-grid"></div>
+        <div class="mouse-aura"></div>
+        <div class="static-aura-1"></div>
+        <div class="static-aura-2"></div>
+        <div class="floating-particles" id="particles"></div>
+    </div>
+
+    <main class="container">
+        
+        <!-- HEADER -->
+        <header class="navbar gs-reveal">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-name">Sachin Yadav</span>
+                    <span class="logo-sub">Web Architect</span>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <a href="mailto:citybytehub@gmail.com" class="contact-btn">
+                    <i class="fa-solid fa-paper-plane"></i> Let's Talk
+                </a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fa-regular fa-sun"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero gs-reveal">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                <span>Available for Projects & Partnerships</span>
+                <span class="badge-divider">|</span>
+                <span class="badge-company"><i class="fa-regular fa-building"></i> CityByteHub</span>
+            </div>
+            <h1 class="hero-title">
+                Building Digital<br>
+                <span class="gradient-text">Empires.</span>
+            </h1>
+            <p class="hero-desc">
+                I'm <strong>Sachin Yadav</strong>, Web Architect & <strong>Co-Founder at CityByteHub</strong>. 
+                I craft <span class="highlight-text">high-performance SaaS platforms</span> that merge 
+                robust backend logic with stunning frontend experiences.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="2">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="8">0</span>
+                    <span class="stat-label">Projects Delivered</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="100">0</span>
+                    <span class="stat-label">Client Satisfaction</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">
+                    <i class="fa-regular fa-eye"></i> View My Work
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <i class="fa-regular fa-message"></i> Get in Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- BENTO GRID -->
+        <section class="bento-grid" id="projects">
+            
+            <!-- ABOUT -->
+            <div class="bento-card about-card gs-reveal tilt-effect">
+                <div class="card-header">
+                    <i class="fa-regular fa-id-card card-icon"></i>
+                    <span class="card-number">01</span>
+                </div>
+                <h3>About Me</h3>
+                <p>
+                    Pursuing <strong>BCA from MDU Rohtak</strong> with a passion for building 
+                    real-world web solutions. Based in <strong>Jaipur, India</strong>.
+                </p>
+                <div class="quick-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <div>
+                            <span class="label">Education</span>
+                            <span class="value">BCA (MDU Rohtak)</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="label">Location</span>
+                            <span class="value">Jaipur, India</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-regular fa-clock"></i>
+                        <div>
+                            <span class="label">Experience</span>
+                            <span class="value">2+ Years</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT -->
+            <div class="bento-card project-card gs-reveal tilt-effect">
+                <div class="project-header">
+                    <div>
+                        <span class="tag"><i class="fa-solid fa-star"></i> Featured</span>
+                        <span class="tag tag-company"><i class="fa-regular fa-building"></i> CityByteHub</span>
+                        <h3>SaaS Platform</h3>
+                    </div>
+                    <div class="project-status-badge">
+                        <span class="status-live">
+                            <span class="pulse-dot-small"></span> Live
+                        </span>
+                    </div>
+                </div>
+                <p class="project-details">
+                    A comprehensive web-based SaaS management platform engineered specifically 
+                    for premium gaming cafes. Built from scratch to manage real-time user sessions, 
+                    dynamic environments, and seamless cafe operations.
+                </p>
+                <div class="tech-stack-row">
+                    <span><i class="fa-brands fa-html5"></i> HTML5</span>
+                    <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <span><i class="fa-solid fa-database"></i> Firebase</span>
+                    <span><i class="fa-solid fa-cloud"></i> Vercel</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://www.citybytehub.me/" target="_blank" class="project-link primary">
+                        <i class="fa-solid fa-rocket"></i> Live Demo
+                    </a>
+                    <a href="#" class="project-link secondary" onclick="showComingSoon()">
+                        <i class="fa-regular fa-file-lines"></i> Case Study
+                    </a>
+                </div>
+            </div>
+
+            <!-- TECH STACK -->
+            <div class="bento-card stack-card gs-reveal tilt-effect">
+                <div class="card-header">
+                    <i class="fa-solid fa-layer-group card-icon"></i>
+                    <span class="card-number">02</span>
+                </div>
+                <h3>Tech Arsenal</h3>
+                <div class="skills-wrapper">
+                    <div class="skill-group">
+                        <div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+                        <h4>Frontend Architecture</h4>
+                        <p>HTML5, CSS3, Modern JavaScript (ES6+)</p>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+                        <h4>Backend & Cloud</h4>
+                        <p>Firebase, Vercel, Google Search Console</p>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h4>AI Integrations</h4>
+                        <p>OpenAI, Claude, Gemini API, EmailJS</p>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
+                    </div>
+                    <div class="skill-group highlight-group">
+                        <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+                        <h4>Learning</h4>
+                        <p>Python & FastAPI</p>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 60%;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PARTNERSHIP -->
+            <div class="bento-card partnership-card gs-reveal tilt-effect">
+                <div class="partnership-header">
+                    <div class="partnership-icon-wrapper">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <div>
+                        <span class="tag">Partnership Firm</span>
+                        <h3>CityByteHub</h3>
+                    </div>
+                </div>
+                <p class="partnership-desc">
+                    Building innovative web solutions for modern businesses. Specializing in 
+                    <strong>SaaS platforms</strong>, web applications, and digital transformation.
+                </p>
+                <div class="firm-details">
+                    <div class="firm-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <div>
+                            <span class="label">Email</span>
+                            <span class="value">citybytehub@gmail.com</span>
+                        </div>
+                    </div>
+                    <div class="firm-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <span class="label">Location</span>
+                            <span class="value">Jaipur, India</span>
+                        </div>
+                    </div>
+                    <div class="firm-item">
+                        <i class="fa-regular fa-calendar"></i>
+                        <div>
+                            <span class="label">Established</span>
+                            <span class="value">2024</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SOCIAL LINKS -->
+                <div class="social-links">
+                    <a href="https://www.instagram.com/citybytehub/" target="_blank" class="social-box instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div class="social-text">
+                            <span class="title">Instagram</span>
+                            <span class="handle">@citybytehub</span>
+                        </div>
+                    </a>
+                    <a href="https://twitter.com/citybytehub" target="_blank" class="social-box twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <div class="social-text">
+                            <span class="title">Twitter/X</span>
+                            <span class="handle">@citybytehub</span>
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/citybytehub" target="_blank" class="social-box facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                        <div class="social-text">
+                            <span class="title">Facebook</span>
+                            <span class="handle">citybytehub</span>
+                        </div>
+                    </a>
+                    <a href="https://www.youtube.com/@citybytehub" target="_blank" class="social-box youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <div class="social-text">
+                            <span class="title">YouTube</span>
+                            <span class="handle">@citybytehub</span>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/company/citybytehub" target="_blank" class="social-box linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                        <div class="social-text">
+                            <span class="title">LinkedIn</span>
+                            <span class="handle">citybytehub</span>
+                        </div>
+                    </a>
+                    <a href="https://github.com/citybytehub" target="_blank" class="social-box github">
+                        <i class="fa-brands fa-github"></i>
+                        <div class="social-text">
+                            <span class="title">GitHub</span>
+                            <span class="handle">citybytehub</span>
+                        </div>
+                    </a>
+                    <a href="https://www.citybytehub.me/" target="_blank" class="social-box website">
+                        <i class="fa-solid fa-globe"></i>
+                        <div class="social-text">
+                            <span class="title">Website</span>
+                            <span class="handle">citybytehub.me</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- OTHER PROJECTS -->
+            <div class="bento-card projects-showcase gs-reveal tilt-effect">
+                <div class="card-header">
+                    <i class="fa-solid fa-folder-open card-icon"></i>
+                    <span class="card-number">03</span>
+                </div>
+                <h3>Other Projects</h3>
+                <div class="project-list">
+                    <div class="project-item">
+                        <div class="project-icon-small">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="project-info">
+                            <h4>E-Commerce Platform</h4>
+                            <p>Full-featured online store</p>
+                        </div>
+                        <span class="project-status status-live">Live</span>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon-small">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <div class="project-info">
+                            <h4>Analytics Dashboard</h4>
+                            <p>Real-time data visualization</p>
+                        </div>
+                        <span class="project-status status-dev">Development</span>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-icon-small">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="project-info">
+                            <h4>AI Chatbot Integration</h4>
+                            <p>Custom AI solutions</p>
+                        </div>
+                        <span class="project-status status-plan">Planning</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="bento-card contact-card gs-reveal tilt-effect" id="contact">
+                <div class="card-header">
+                    <i class="fa-regular fa-comment-dots card-icon"></i>
+                    <span class="card-number">04</span>
+                </div>
+                <h3>Let's Connect</h3>
+                <p>Have a project in mind? Let's discuss.</p>
+                <div class="contact-options">
+                    <a href="mailto:citybytehub@gmail.com" class="contact-option">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Email</span>
+                        <small>citybytehub@gmail.com</small>
+                    </a>
+                    <a href="https://wa.me/919999999999?text=Hi%20Sachin%2C%20I%20want%20to%20discuss%20a%20web%20project" target="_blank" class="contact-option whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                        <small>Quick Response</small>
+                    </a>
+                    <a href="tel:+919999999999" class="contact-option">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call</span>
+                        <small>Direct Connect</small>
+                    </a>
+                </div>
+                <div class="contact-availability">
+                    <span class="availability-dot"></span>
+                    <span>Available for freelance work</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Sachin Yadav</h3>
+                    </div>
+                    <p>Web Architect & Co-Founder at CityByteHub</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:citybytehub@gmail.com">
+                        <i class="fa-regular fa-envelope"></i> citybytehub@gmail.com
+                    </a>
+                    <a href="https://www.citybytehub.me/" target="_blank">
+                        <i class="fa-solid fa-globe"></i> citybytehub.me
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Designed & Developed with <i class="fa-solid fa-heart"></i> by <strong>Sachin Yadav</strong></p>
+                <p class="footer-copyright">© 2026 CityByteHub. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+    
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loadingScreen').classList.add('hidden');
+            }, 800);
+        });
+
+        // Coming Soon Alert
+        function showComingSoon() {
+            alert('📢 Case study coming soon! Stay tuned for detailed project breakdown.');
+        }
+
+        // Theme Toggle
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            var icon = this.querySelector('i');
+            if (document.body.classList.contains('dark-theme')) {
+                icon.className = 'fa-regular fa-moon';
+            } else {
+                icon.className = 'fa-regular fa-sun';
+            }
+        });
+    </script>
+</body>
+</html>
