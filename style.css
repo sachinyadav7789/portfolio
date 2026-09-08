@@ -23,16 +23,21 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   min-width: 320px;
   background: var(--bg);
   color: var(--text);
   font-family: "DM Sans", sans-serif;
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -64,8 +69,10 @@ svg {
 }
 
 .wrap {
-  width: min(var(--max), calc(100% - 48px));
+  width: calc(100% - 48px);
+  max-width: var(--max);
   margin-inline: auto;
+  min-width: 0;
 }
 
 .scroll-progress {
@@ -147,6 +154,8 @@ svg {
 }
 
 .nav-wrap {
+  width: 100%;
+  max-width: var(--max);
   height: var(--header);
   display: flex;
   align-items: center;
@@ -157,6 +166,8 @@ svg {
 
 .brand {
   display: flex;
+  min-width: 0;
+  max-width: 100%;
   align-items: center;
   gap: 10px;
   min-width: 0;
@@ -164,6 +175,8 @@ svg {
   font-weight: 700;
   font-size: 15px;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .brand-mark {
@@ -271,6 +284,8 @@ svg {
 
 .hero {
   position: relative;
+  min-width: 0;
+  max-width: var(--max);
   padding: clamp(78px, 10vw, 112px) 0 82px;
 }
 
@@ -371,6 +386,9 @@ h3 {
 }
 
 h1 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: normal;
   font-size: clamp(44px, 7vw, 82px);
   line-height: 1.01;
   letter-spacing: -0.055em;
@@ -388,6 +406,9 @@ h1 span {
 }
 
 .hero-copy {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   max-width: 720px;
   color: var(--muted);
   font-size: 18px;
@@ -483,6 +504,7 @@ h1 span {
 
 .section-head {
   display: flex;
+  min-width: 0;
   align-items: end;
   justify-content: space-between;
   gap: 35px;
@@ -493,6 +515,11 @@ h1 span {
   font-size: clamp(28px, 4vw, 44px);
   letter-spacing: -0.04em;
   margin: 8px 0 0;
+}
+
+.section-head > div,
+.section-head > p {
+  min-width: 0;
 }
 
 .section-head > p {
@@ -591,6 +618,7 @@ h1 span {
 
 .project-grid {
   display: grid;
+  min-width: 0;
   grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
   gap: 35px;
   padding: 28px 24px 26px;
@@ -602,6 +630,7 @@ h1 span {
 
 .project-title-row {
   display: flex;
+  min-width: 0;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -729,6 +758,8 @@ h1 span {
 }
 
 .feature {
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 15px;
   border-bottom: 1px solid var(--line);
   display: flex;
@@ -745,6 +776,9 @@ h1 span {
 }
 
 .feature span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
   font-size: 12px;
   color: #ffffff;
   line-height: 1.5;
@@ -802,6 +836,8 @@ h1 span {
 }
 
 .compact .feature {
+  min-width: 0;
+  overflow-wrap: anywhere;
   padding: 12px 14px;
 }
 
@@ -812,6 +848,7 @@ h1 span {
 }
 
 .skill-card {
+  min-width: 0;
   border: 1px solid var(--line);
   background: rgba(126, 112, 68, 0.793);
   border-radius: 18px;
@@ -880,6 +917,7 @@ h1 span {
 
 .about-card {
   display: grid;
+  min-width: 0;
   grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   border: 1px solid var(--line);
   border-radius: 24px;
@@ -941,6 +979,7 @@ h1 span {
 }
 
 .contact-card {
+  min-width: 0;
   border: 1px solid rgba(85, 230, 255, 0.16);
   border-radius: 24px;
   padding: 42px;
@@ -960,6 +999,7 @@ h1 span {
 
 .contact-heading {
   display: flex;
+  min-width: 0;
   justify-content: space-between;
   gap: 30px;
 }
@@ -993,6 +1033,7 @@ h1 span {
 
 .contact-links a {
   display: flex;
+  min-width: 0; flex;
   align-items: center;
   gap: 12px;
   min-width: 0;
@@ -1051,6 +1092,7 @@ h1 span {
 }
 
 .footer {
+  min-width: 0;
   padding: 28px 0 36px;
   border-top: 1px solid var(--line);
   display: grid;
@@ -1549,6 +1591,67 @@ h1 span {
 
   .contact-card {
     padding-inline: 17px;
+  }
+}
+
+/* Final viewport-safety rules: never create horizontal page overflow */
+main, header, footer, section, article, .project, .skill-card, .about-card, .contact-card {
+  max-width: 100%;
+}
+
+@media (max-width: 620px) {
+  html, body {
+    overflow-x: clip !important;
+  }
+
+  .nav-wrap {
+    gap: 8px;
+  }
+
+  .brand {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .brand > span:last-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-actions {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .hero-orbit {
+    pointer-events: none;
+  }
+
+  h1, .hero-copy, .section-head h2, .section-head > p,
+  .project h3, .project h4, .project p, .about-copy p,
+  .contact-card h2, .contact-heading p, .footer p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .project-title-row > div,
+  .project-info, .feature-panel, .about-copy, .about-facts,
+  .contact-heading, .contact-links {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-title-row > div {
+    overflow: hidden;
+  }
+
+  .project h3 {
+    min-width: 0;
+  }
+
+  .project-bottom > span {
+    overflow-wrap: anywhere;
   }
 }
 
