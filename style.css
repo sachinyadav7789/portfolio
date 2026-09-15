@@ -1677,3 +1677,209 @@ main, header, footer, section, article, .project, .skill-card, .about-card, .con
     display: none;
   }
 }
+
+
+/* =========================================================
+   WEEK 1 ASSIGNMENT UPDATES
+   Profile photo + Education section
+   Existing design preserved; these are additive overrides.
+   ========================================================= */
+
+/* ---------- Hero profile photo ---------- */
+.hero-photo {
+  width: 112px;
+  height: 112px;
+  margin: 0 0 22px;
+  position: relative;
+  z-index: 3;
+  border-radius: 50%;
+  padding: 3px;
+  background: linear-gradient(135deg, var(--blue), var(--purple), var(--green));
+  box-shadow:
+    0 0 0 1px rgba(85, 230, 255, 0.15),
+    0 12px 38px rgba(0, 0, 0, 0.45),
+    0 0 30px rgba(85, 230, 255, 0.12);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background: var(--panel);
+  border: 3px solid var(--bg);
+}
+
+/* Keep the decorative orbit behind the profile area */
+.hero-orbit {
+  z-index: 0;
+}
+
+.hero > *:not(.hero-orbit) {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Education section ---------- */
+.education-section {
+  scroll-margin-top: 92px;
+}
+
+.education-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 30px;
+  align-items: start;
+  min-width: 0;
+  padding: 32px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at 88% 10%,
+      rgba(85, 230, 255, 0.08),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.045),
+      rgba(255, 255, 255, 0.015)
+    );
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.25s,
+    border-color 0.25s,
+    box-shadow 0.25s;
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    var(--blue),
+    var(--purple),
+    var(--green)
+  );
+}
+
+.education-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(85, 230, 255, 0.28);
+  box-shadow: 0 24px 65px rgba(0, 0, 0, 0.24);
+}
+
+.education-year {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: -0.03em;
+  padding-top: 3px;
+}
+
+.education-content {
+  min-width: 0;
+}
+
+.education-label {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.education-content h3 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+.education-content p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.education-content .chips {
+  margin-top: 18px;
+}
+
+/* ---------- Education responsive ---------- */
+@media (max-width: 900px) {
+  .education-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .education-year {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-photo {
+    width: 94px;
+    height: 94px;
+    margin-bottom: 19px;
+  }
+
+  .education-section {
+    scroll-margin-top: 78px;
+  }
+
+  .education-card {
+    padding: 24px 20px;
+    border-radius: 20px;
+    gap: 13px;
+  }
+
+  .education-year {
+    font-size: 25px;
+  }
+
+  .education-content h3 {
+    font-size: 25px;
+  }
+
+  .education-content p {
+    font-size: 13.5px;
+    line-height: 1.75;
+  }
+
+  .education-label {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero-photo {
+    width: 88px;
+    height: 88px;
+  }
+
+  .education-card {
+    padding: 21px 17px;
+  }
+}
+
+/* Small CSS correction already present in the original file */
+.contact-links a {
+  min-width: 0;
+  flex: 1 1 auto;
+}
